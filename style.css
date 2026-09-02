@@ -40,7 +40,6 @@ button {
   margin: 0 auto;
 }
 
-
 /* ================= VARIÁVEIS ================= */
 
 :root {
@@ -58,7 +57,6 @@ button {
 
   --serif: "Cormorant Garamond", serif;
 }
-
 
 /* ================= HEADER ================= */
 
@@ -82,8 +80,7 @@ button {
 
   padding: 14px 0;
 
-  box-shadow:
-    0 5px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
 }
 
 .header-container {
@@ -125,7 +122,6 @@ button {
 
   opacity: 0.8;
 }
-
 
 /* NAV */
 
@@ -178,7 +174,6 @@ button {
 
   cursor: pointer;
 }
-
 
 /* ================= BUTTONS ================= */
 
@@ -242,7 +237,6 @@ button {
   padding: 17px 26px;
 }
 
-
 /* ================= HERO ================= */
 
 .hero {
@@ -253,8 +247,7 @@ button {
   display: flex;
   align-items: center;
 
-  background:
-    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=90")
+  background: url("assets/foto-chale.jpeg")
     center / cover no-repeat;
 
   color: white;
@@ -264,14 +257,13 @@ button {
   position: absolute;
   inset: 0;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(15, 23, 15, 0.9) 0%,
-      rgba(15, 23, 15, 0.63) 45%,
-      rgba(15, 23, 15, 0.2) 75%,
-      rgba(15, 23, 15, 0.15) 100%
-    );
+  background: linear-gradient(
+    90deg,
+    rgba(15, 23, 15, 0.9) 0%,
+    rgba(15, 23, 15, 0.63) 45%,
+    rgba(15, 23, 15, 0.2) 75%,
+    rgba(15, 23, 15, 0.15) 100%
+  );
 }
 
 .hero-content {
@@ -380,12 +372,9 @@ button {
 
 @keyframes floating {
   to {
-    transform:
-      translateX(-50%)
-      translateY(6px);
+    transform: translateX(-50%) translateY(6px);
   }
 }
-
 
 /* ================= SEÇÕES ================= */
 
@@ -443,89 +432,198 @@ button {
   margin: 20px auto 0;
 }
 
-
-/* ================= GALERIA ================= */
-
-.gallery-section {
-  background: var(--cream);
+.video-section {
+  padding: 110px 0;
+  background: #eee9df;
 }
 
-.gallery-grid {
-  display: grid;
+.video-container {
+  max-width: 1050px;
+  margin: 0 auto;
 
-  grid-template-columns: 1.2fr 1fr 1fr;
-  grid-template-rows: 230px 230px;
-
-  gap: 8px;
-}
-
-.gallery-item {
-  position: relative;
-
-  border: none;
-
-  padding: 0;
-
+  border-radius: 14px;
   overflow: hidden;
 
-  cursor: pointer;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
 
-  border-radius: 8px;
+.video-container video {
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  object-fit: cover;
+}
+
+.gallery-section {
+  padding: 110px 0;
+  background: #f7f3eb;
+}
+
+.carousel {
+  position: relative;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  position: relative;
+  height: 620px;
+
+  border-radius: 14px;
+  overflow: hidden;
 
   background: #ddd;
 }
 
-.gallery-main {
-  grid-row: 1 / 3;
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0;
+  transform: scale(1.03);
+
+  transition:
+    opacity 0.6s ease,
+    transform 0.8s ease;
 }
 
-.gallery-item img {
+.carousel-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.carousel-slide img {
   width: 100%;
   height: 100%;
 
   object-fit: cover;
-
-  transition: 0.6s ease;
 }
 
-.gallery-item:hover img {
-  transform: scale(1.05);
-}
+/* SETAS */
 
-.gallery-hover {
+.carousel-btn {
   position: absolute;
+  top: 50%;
 
-  inset: 0;
+  transform: translateY(-50%);
 
+  width: 52px;
+  height: 52px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  color: #26351f;
+
+  font-size: 23px;
+
+  cursor: pointer;
+
+  z-index: 5;
+
+  transition: 0.3s;
+}
+
+.carousel-btn:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.prev {
+  left: -26px;
+}
+
+.next {
+  right: -26px;
+}
+
+/* PARTE DE BAIXO */
+
+.carousel-footer {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 22px;
+}
+
+.carousel-dots {
   display: flex;
   align-items: center;
-  justify-content: center;
 
-  background: rgba(20, 30, 17, 0);
+  gap: 8px;
+}
 
-  color: white;
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #b7b8af;
+
+  cursor: pointer;
 
   transition: 0.3s;
 }
 
-.gallery-hover svg {
-  opacity: 0;
+.carousel-dot.active {
+  width: 26px;
 
-  transform: scale(0.8);
+  border-radius: 10px;
 
-  transition: 0.3s;
+  background: #466832;
 }
 
-.gallery-item:hover .gallery-hover {
-  background: rgba(20, 30, 17, 0.25);
+.carousel-counter {
+  font-size: 13px;
+
+  letter-spacing: 2px;
+
+  color: #6b6c64;
 }
 
-.gallery-item:hover .gallery-hover svg {
-  opacity: 1;
+/* MOBILE */
 
-  transform: scale(1);
+@media (max-width: 768px) {
+
+  .carousel-track {
+    height: 470px;
+  }
+
+  .carousel-btn {
+    width: 43px;
+    height: 43px;
+
+    font-size: 18px;
+  }
+
+  .prev {
+    left: 12px;
+  }
+
+  .next {
+    right: 12px;
+  }
+
 }
 
+@media (max-width: 500px) {
+
+  .carousel-track {
+    height: 380px;
+  }
+
+}
 
 /* ================= COMODIDADES ================= */
 
@@ -536,8 +634,7 @@ button {
 .amenities-grid {
   display: grid;
 
-  grid-template-columns:
-    repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
 
   border-top: 1px solid rgba(50, 60, 40, 0.12);
 
@@ -578,7 +675,6 @@ button {
 
   color: var(--text-light);
 }
-
 
 /* ================= EXPERIÊNCIA ================= */
 
@@ -670,7 +766,6 @@ button {
   object-fit: cover;
 }
 
-
 /* ================= LOCALIZAÇÃO ================= */
 
 .location-section {
@@ -721,8 +816,8 @@ button {
 }
 
 .location-info .localizacao-color {
-    color: var(--green-dark);
-    font-weight: 700;
+  color: var(--green-dark);
+  font-weight: 700;
 }
 
 .location-images {
@@ -747,7 +842,6 @@ button {
   transform: translateY(-20px);
 }
 
-
 /* ================= CTA ================= */
 
 .cta {
@@ -758,9 +852,7 @@ button {
   display: flex;
   align-items: center;
 
-  background:
-    url("assets/bananeiras-catedral.jpeg")
-    center / cover no-repeat;
+  background: url("assets/bananeiras-catedral.jpeg") center / cover no-repeat;
 
   color: white;
 }
@@ -770,13 +862,12 @@ button {
 
   inset: 0;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(16, 23, 14, 0.92),
-      rgba(16, 23, 14, 0.6),
-      rgba(16, 23, 14, 0.3)
-    );
+  background: linear-gradient(
+    90deg,
+    rgba(16, 23, 14, 0.92),
+    rgba(16, 23, 14, 0.6),
+    rgba(16, 23, 14, 0.3)
+  );
 }
 
 .cta-content {
@@ -829,7 +920,6 @@ button {
   color: #a5ca8c;
 }
 
-
 /* ================= FOOTER ================= */
 
 .footer {
@@ -870,7 +960,6 @@ button {
   font-size: 11px;
 }
 
-
 /* ================= WHATSAPP FLUTUANTE ================= */
 
 .floating-whatsapp {
@@ -894,8 +983,7 @@ button {
 
   z-index: 900;
 
-  box-shadow:
-    0 8px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
 
   transition: 0.3s;
 }
@@ -908,7 +996,6 @@ button {
 .floating-whatsapp:hover {
   transform: translateY(-4px) scale(1.04);
 }
-
 
 /* ================= MODAL ================= */
 
@@ -968,11 +1055,9 @@ button {
   height: 35px;
 }
 
-
 /* ================= RESPONSIVIDADE ================= */
 
 @media (max-width: 1000px) {
-
   .nav {
     position: fixed;
 
@@ -993,8 +1078,7 @@ button {
 
     transition: 0.35s;
 
-    box-shadow:
-      -10px 0 30px rgba(0, 0, 0, 0.25);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.25);
   }
 
   .nav.active {
@@ -1015,8 +1099,7 @@ button {
   }
 
   .amenities-grid {
-    grid-template-columns:
-      repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .amenity:nth-child(3) {
@@ -1040,12 +1123,9 @@ button {
   .location-info {
     max-width: 600px;
   }
-
 }
 
-
 @media (max-width: 768px) {
-
   .section {
     padding: 80px 0;
   }
@@ -1057,11 +1137,7 @@ button {
   }
 
   .hero-overlay {
-    background:
-      linear-gradient(
-        rgba(16, 24, 15, 0.65),
-        rgba(16, 24, 15, 0.9)
-      );
+    background: linear-gradient(rgba(16, 24, 15, 0.65), rgba(16, 24, 15, 0.9));
   }
 
   .hero-content {
@@ -1094,15 +1170,12 @@ button {
     display: none;
   }
 
-
   /* GALERIA */
 
   .gallery-grid {
-    grid-template-columns:
-      repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
-    grid-template-rows:
-      340px 190px 190px;
+    grid-template-rows: 340px 190px 190px;
   }
 
   .gallery-main {
@@ -1111,23 +1184,19 @@ button {
     grid-row: auto;
   }
 
-
   /* COMODIDADES */
 
   .amenities-grid {
-    grid-template-columns:
-      repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .amenity {
-    border-bottom:
-      1px solid rgba(50, 60, 40, 0.12);
+    border-bottom: 1px solid rgba(50, 60, 40, 0.12);
   }
 
   .amenity:nth-child(2n) {
     border-right: none;
   }
-
 
   /* EXPERIÊNCIA */
 
@@ -1138,7 +1207,6 @@ button {
   .experience-image {
     min-height: 400px;
   }
-
 
   /* LOCALIZAÇÃO */
 
@@ -1158,7 +1226,6 @@ button {
     grid-column: 1 / 3;
   }
 
-
   /* FOOTER */
 
   .footer-content {
@@ -1166,12 +1233,9 @@ button {
 
     align-items: flex-start;
   }
-
 }
 
-
 @media (max-width: 500px) {
-
   .hero h1 {
     font-size: 53px;
   }
@@ -1227,5 +1291,4 @@ button {
     bottom: 18px;
     right: 18px;
   }
-
 }
