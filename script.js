@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     5583999999999
     */
 
-    const numeroWhatsApp = "5583999760359";
+    const numeroWhatsApp = "5583996246304";
 
     const mensagemWhatsApp =
         "Olá! Vi o site do Chalé da Serra e gostaria de saber o valor da diária e a disponibilidade para hospedagem.";
