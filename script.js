@@ -1,31 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    // =============================================
+    // WHATSAPP
+    // =============================================
+
     /*
-    ==========================================
-    CONFIGURAÇÃO DO WHATSAPP
-    ==========================================
+      Coloque aqui o número verdadeiro.
   
-    Troque pelo número verdadeiro do proprietário.
+      Exemplo:
+      83 99999-9999
   
-    Formato:
-    55 + DDD + número
+      vira:
   
-    Exemplo:
-    5583999999999
+      5583999999999
     */
 
-    const numeroWhatsApp = "5583996246304";
+    const numeroWhatsApp = "5583993624884";
 
     const mensagemWhatsApp =
         "Olá! Vi o site do Chalé da Serra e gostaria de saber o valor da diária e a disponibilidade para hospedagem.";
 
 
-    // ==========================================
-    // LINKS DO WHATSAPP
-    // ==========================================
-
     const whatsappLinks =
         document.querySelectorAll(".whatsapp-link");
+
 
     whatsappLinks.forEach((link) => {
 
@@ -42,34 +40,41 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    // ==========================================
-    // HEADER AO ROLAR A PÁGINA
-    // ==========================================
+    // =============================================
+    // HEADER
+    // =============================================
 
     const header =
         document.getElementById("header");
 
+
     function atualizarHeader() {
 
         if (window.scrollY > 50) {
+
             header.classList.add("scrolled");
+
         } else {
+
             header.classList.remove("scrolled");
+
         }
 
     }
+
 
     window.addEventListener(
         "scroll",
         atualizarHeader
     );
 
+
     atualizarHeader();
 
 
-    // ==========================================
+    // =============================================
     // MENU MOBILE
-    // ==========================================
+    // =============================================
 
     const menuButton =
         document.getElementById("menuButton");
@@ -77,164 +82,320 @@ document.addEventListener("DOMContentLoaded", () => {
     const nav =
         document.getElementById("nav");
 
-    menuButton.addEventListener("click", () => {
 
-        nav.classList.toggle("active");
+    menuButton.addEventListener(
+        "click",
+        () => {
 
-    });
+            nav.classList.toggle("active");
 
+        }
+    );
 
-    // Fecha menu depois de clicar em um link
 
     const navLinks =
         nav.querySelectorAll("a");
 
+
     navLinks.forEach((link) => {
 
-        link.addEventListener("click", () => {
+        link.addEventListener(
+            "click",
+            () => {
 
-            nav.classList.remove("active");
+                nav.classList.remove("active");
 
-        });
+            }
+        );
 
     });
 
 
-    // ==========================================
-    // GALERIA / MODAL
-    // ==========================================
+    // =============================================
+    // CARROSSEL
+    // =============================================
 
-    const slides = document.querySelectorAll(".carousel-slide");
+    const slides =
+        document.querySelectorAll(
+            ".carousel-slide"
+        );
 
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
+    const prevBtn =
+        document.getElementById("prevBtn");
 
-    const dotsContainer = document.getElementById("carouselDots");
-    const counter = document.getElementById("carouselCounter");
+    const nextBtn =
+        document.getElementById("nextBtn");
+
+    const dotsContainer =
+        document.getElementById(
+            "carouselDots"
+        );
+
+    const counter =
+        document.getElementById(
+            "carouselCounter"
+        );
+
 
     let currentSlide = 0;
 
 
-    /* CRIA AS BOLINHAS */
+    // =============================================
+    // CRIAR BOLINHAS
+    // =============================================
 
     slides.forEach((slide, index) => {
 
-        const dot = document.createElement("button");
+        const dot =
+            document.createElement("button");
 
-        dot.classList.add("carousel-dot");
+
+        dot.classList.add(
+            "carousel-dot"
+        );
+
+
+        dot.setAttribute(
+            "aria-label",
+            `Ir para foto ${index + 1}`
+        );
+
 
         if (index === 0) {
+
             dot.classList.add("active");
+
         }
 
-        dot.addEventListener("click", () => {
-            showSlide(index);
-        });
+
+        dot.addEventListener(
+            "click",
+            () => {
+
+                showSlide(index);
+
+            }
+        );
+
 
         dotsContainer.appendChild(dot);
 
     });
 
 
-    const dots = document.querySelectorAll(".carousel-dot");
+    const dots =
+        document.querySelectorAll(
+            ".carousel-dot"
+        );
 
 
-    /* MOSTRA FOTO */
+    // =============================================
+    // MOSTRAR FOTO
+    // =============================================
 
     function showSlide(index) {
 
         if (index >= slides.length) {
+
             currentSlide = 0;
+
         } else if (index < 0) {
-            currentSlide = slides.length - 1;
+
+            currentSlide =
+                slides.length - 1;
+
         } else {
+
             currentSlide = index;
+
         }
 
+
         slides.forEach((slide) => {
+
             slide.classList.remove("active");
+
         });
+
 
         dots.forEach((dot) => {
+
             dot.classList.remove("active");
+
         });
 
-        slides[currentSlide].classList.add("active");
-        dots[currentSlide].classList.add("active");
+
+        slides[currentSlide]
+            .classList.add("active");
+
+
+        dots[currentSlide]
+            .classList.add("active");
 
 
         const atual =
-            String(currentSlide + 1).padStart(2, "0");
+            String(currentSlide + 1)
+                .padStart(2, "0");
+
 
         const total =
-            String(slides.length).padStart(2, "0");
+            String(slides.length)
+                .padStart(2, "0");
 
-        counter.textContent = `${atual} / ${total}`;
+
+        counter.textContent =
+            `${atual} / ${total}`;
+
     }
 
 
-    /* SETAS */
+    // =============================================
+    // SETAS
+    // =============================================
 
-    nextBtn.addEventListener("click", () => {
-        showSlide(currentSlide + 1);
-    });
+    nextBtn.addEventListener(
+        "click",
+        () => {
 
-    prevBtn.addEventListener("click", () => {
-        showSlide(currentSlide - 1);
-    });
+            showSlide(currentSlide + 1);
 
-    // CARROSSEL MOBILE
+        }
+    );
+
+
+    prevBtn.addEventListener(
+        "click",
+        () => {
+
+            showSlide(currentSlide - 1);
+
+        }
+    );
+
+
+    // =============================================
+    // SWIPE NO CELULAR
+    // =============================================
+
+    const carouselTrack =
+        document.getElementById(
+            "carouselTrack"
+        );
+
+
     let touchStartX = 0;
     let touchEndX = 0;
 
-    const carouselTrack =
-        document.getElementById("carouselTrack");
 
-    carouselTrack.addEventListener("touchstart", (event) => {
-        touchStartX = event.changedTouches[0].screenX;
-    });
+    carouselTrack.addEventListener(
+        "touchstart",
+        (event) => {
 
-    carouselTrack.addEventListener("touchend", (event) => {
+            touchStartX =
+                event.changedTouches[0].screenX;
 
-        touchEndX = event.changedTouches[0].screenX;
+        },
+        {
+            passive: true
+        }
+    );
 
-        handleSwipe();
 
-    });
+    carouselTrack.addEventListener(
+        "touchend",
+        (event) => {
+
+            touchEndX =
+                event.changedTouches[0].screenX;
+
+            handleSwipe();
+
+        },
+        {
+            passive: true
+        }
+    );
+
 
     function handleSwipe() {
 
-        const difference =
+        const diferenca =
             touchStartX - touchEndX;
 
-        if (difference > 50) {
-            showSlide(currentSlide + 1);
+
+        if (Math.abs(diferenca) < 50) {
+            return;
         }
 
-        if (difference < -50) {
+
+        if (diferenca > 0) {
+
+            showSlide(currentSlide + 1);
+
+        } else {
+
             showSlide(currentSlide - 1);
+
         }
 
     }
 
 
-    // ==========================================
-    // ANO DO FOOTER
-    // ==========================================
+    // =============================================
+    // TECLADO
+    // =============================================
+
+    document.addEventListener(
+        "keydown",
+        (event) => {
+
+            if (event.key === "ArrowRight") {
+
+                showSlide(
+                    currentSlide + 1
+                );
+
+            }
+
+
+            if (event.key === "ArrowLeft") {
+
+                showSlide(
+                    currentSlide - 1
+                );
+
+            }
+
+        }
+    );
+
+
+    // =============================================
+    // ANO
+    // =============================================
 
     const currentYear =
-        document.getElementById("currentYear");
+        document.getElementById(
+            "currentYear"
+        );
 
-    currentYear.textContent =
-        new Date().getFullYear();
+
+    if (currentYear) {
+
+        currentYear.textContent =
+            new Date().getFullYear();
+
+    }
 
 
-    // ==========================================
-    // LUCIDE ICONS
-    // ==========================================
+    // =============================================
+    // LUCIDE
+    // =============================================
 
     if (window.lucide) {
+
         lucide.createIcons();
+
     }
 
 });
