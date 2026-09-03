@@ -19,10 +19,10 @@
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
-  <!-- Ícones -->
+  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest" defer></script>
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -30,27 +30,41 @@
   <!-- ================= HEADER ================= -->
 
   <header class="header" id="header">
+
     <div class="container header-container">
 
       <a href="#inicio" class="logo">
+
         <span class="logo-icon">⌂</span>
 
         <div>
           <strong>CHALÉ DA SERRA</strong>
           <small>BANANEIRAS - PB</small>
         </div>
+
       </a>
 
       <nav class="nav" id="nav">
+
         <a href="#sobre">O chalé</a>
-        <a href="#comodidades">Comodidades</a>
-        <a href="#localizacao">Localização</a>
-        <a href="#galeria">Galeria</a>
+
+        <a href="#galeria">
+          Galeria
+        </a>
+
+        <a href="#comodidades">
+          Comodidades
+        </a>
+
+        <a href="#localizacao">
+          Localização
+        </a>
 
         <a href="#" class="btn btn-nav whatsapp-link">
           <i data-lucide="message-circle"></i>
           Consultar diária
         </a>
+
       </nav>
 
       <button class="menu-button" id="menuButton" aria-label="Abrir menu">
@@ -58,12 +72,13 @@
       </button>
 
     </div>
+
   </header>
 
 
-  <!-- ================= HERO ================= -->
-
   <main>
+
+    <!-- ================= HERO ================= -->
 
     <section class="hero" id="inicio">
 
@@ -100,29 +115,39 @@
         </div>
 
         <div class="hero-detail">
+
           <i data-lucide="shield-check"></i>
 
           <span>
             Atendimento rápido e personalizado
           </span>
+
         </div>
 
       </div>
 
-      <a href="#galeria" class="scroll-down">
+      <a href="#video" class="scroll-down">
+
         <span>Conheça o chalé</span>
 
         <i data-lucide="chevron-down"></i>
+
       </a>
 
     </section>
 
-    <section class="video-section">
+
+    <!-- ================= VÍDEO ================= -->
+
+    <section class="video-section section" id="video">
 
       <div class="container">
 
         <div class="section-heading">
-          <span class="eyebrow">CONHEÇA O CHALÉ</span>
+
+          <span class="eyebrow">
+            CONHEÇA O CHALÉ
+          </span>
 
           <h2>
             Um pouco do que
@@ -130,17 +155,21 @@
           </h2>
 
           <p>
-            Aperte o play e sinta um pouco da tranquilidade
-            que você vai encontrar no nosso chalé.
+            Aperte o play e sinta um pouco da tranquilidade,
+            do conforto e do clima especial que você encontrará
+            no Chalé da Serra.
           </p>
+
         </div>
 
         <div class="video-container">
 
           <video controls poster="assets/foto-chale.jpeg" preload="metadata">
+
             <source src="assets/video-chale.mp4" type="video/mp4">
 
             Seu navegador não suporta vídeos.
+
           </video>
 
         </div>
@@ -152,107 +181,147 @@
 
     <!-- ================= GALERIA ================= -->
 
-<section class="gallery-section" id="galeria">
-  <div class="container">
+    <section class="gallery-section section" id="galeria">
 
-    <div class="section-heading">
-      <span class="eyebrow">GALERIA</span>
-      <h2>Conheça cada detalhe do <span>Chalé da Serra</span></h2>
-      <p>
-        Deslize pelas fotos e descubra um pouco do conforto,
-        da tranquilidade e da experiência que esperam por você.
-      </p>
-    </div>
+      <div class="container">
 
-    <div class="carousel">
+        <div class="section-heading">
 
-      <button class="carousel-btn prev" id="prevBtn">
-        &#10094;
-      </button>
+          <span class="eyebrow">
+            GALERIA
+          </span>
 
-      <div class="carousel-track" id="carouselTrack">
+          <h2>
+            Conheça cada detalhe do
+            <span>Chalé da Serra</span>
+          </h2>
 
-        <div class="carousel-slide active">
-          <img
-            src="assets/foto-chale.jpeg"
-            alt="Área externa do chalé"
-          >
-        </div>
-        <div class="carousel-slide active">
-          <img
-            src="assets/foto-chale7.jpeg"
-            alt="Área externa do chalé"
-          >
-        </div>
-        <div class="carousel-slide active">
-          <img
-            src="assets/foto-chale6.jpeg"
-            alt="Área externa do chalé"
-          >
+          <p>
+            Deslize pelas fotos e descubra um pouco
+            do conforto, da tranquilidade e da experiência
+            que esperam por você.
+          </p>
+
         </div>
 
-        <div class="carousel-slide">
-          <img
-            src="assets/foto-chale5.jpeg"
-            alt="Quarto aconchegante"
-          >
-        </div>
 
-        <div class="carousel-slide">
-          <img
-            src="assets/foto-chale8.jpeg"
-            alt="Sala de estar"
-          >
-        </div>
+        <div class="carousel">
 
-        <div class="carousel-slide">
-          <img
-            src="assets/foto-chale9.jpeg"
-            alt="Cozinha"
-          >
-        </div>
-        <div class="carousel-slide">
-          <img
-            src="assets/foto-chale4.jpeg"
-            alt="Cozinha"
-          >
-        </div>
-        <div class="carousel-slide">
-          <img
-            src="assets/foto-chale2.jpeg"
-            alt="Cozinha"
-          >
-        </div>
-        <div class="carousel-slide">
-          <img
-            src="assets/foto-chale3.jpeg"
-            alt="Cozinha"
-          >
+          <button class="carousel-btn prev" id="prevBtn" aria-label="Foto anterior">
+            &#10094;
+          </button>
+
+
+          <div class="carousel-track" id="carouselTrack">
+
+            <!-- FOTO 1 -->
+
+            <div class="carousel-slide active">
+
+              <img src="assets/foto-chale.jpeg" alt="Área externa do Chalé da Serra">
+
+            </div>
+
+
+            <!-- FOTO 2 -->
+
+            <div class="carousel-slide">
+
+              <img src="assets/foto-chale7.jpeg" alt="Área externa do chalé">
+
+            </div>
+
+
+            <!-- FOTO 3 -->
+
+            <div class="carousel-slide">
+
+              <img src="assets/foto-chale6.jpeg" alt="Ambiente do Chalé da Serra">
+
+            </div>
+
+
+            <!-- FOTO 4 -->
+
+            <div class="carousel-slide">
+
+              <img src="assets/foto-chale5.jpeg" alt="Suíte do Chalé da Serra">
+
+            </div>
+
+
+            <!-- FOTO 5 -->
+
+            <div class="carousel-slide">
+
+              <img src="assets/foto-chale8.jpeg" alt="Sala do Chalé da Serra">
+
+            </div>
+
+
+            <!-- FOTO 6 -->
+
+            <div class="carousel-slide">
+
+              <img src="assets/foto-chale9.jpeg" alt="Cozinha do Chalé da Serra">
+
+            </div>
+
+
+            <!-- FOTO 7 -->
+
+            <div class="carousel-slide">
+
+              <img src="assets/foto-chale4.jpeg" alt="Ambiente interno do Chalé da Serra">
+
+            </div>
+
+
+            <!-- FOTO 8 -->
+
+            <div class="carousel-slide">
+
+              <img src="assets/foto-chale2.jpeg" alt="Área interna do Chalé da Serra">
+
+            </div>
+
+
+            <!-- FOTO 9 -->
+
+            <div class="carousel-slide">
+
+              <img src="assets/foto-chale3.jpeg" alt="Detalhes do Chalé da Serra">
+
+            </div>
+
+          </div>
+
+
+          <button class="carousel-btn next" id="nextBtn" aria-label="Próxima foto">
+            &#10095;
+          </button>
+
+
+          <div class="carousel-footer">
+
+            <div class="carousel-dots" id="carouselDots"></div>
+
+            <span class="carousel-counter" id="carouselCounter">
+              01 / 09
+            </span>
+
+          </div>
+
         </div>
 
       </div>
 
-      <button class="carousel-btn next" id="nextBtn">
-        &#10095;
-      </button>
-
-      <div class="carousel-footer">
-        <div class="carousel-dots" id="carouselDots"></div>
-
-        <span class="carousel-counter" id="carouselCounter">
-          01 / 09
-        </span>
-      </div>
-
-    </div>
-
-  </div>
-</section>
+    </section>
 
 
     <!-- ================= COMODIDADES ================= -->
 
-    <section class="section amenities-section" id="comodidades">
+    <section class="amenities-section section" id="comodidades">
 
       <div class="container">
 
@@ -263,97 +332,225 @@
           </span>
 
           <h2>
-            Tudo para uma
-            <span>estadia especial</span>
+            Tudo o que você precisa para
+            <span>uma estadia confortável</span>
           </h2>
+
+          <p>
+            Uma estrutura pensada para oferecer conforto,
+            praticidade e tranquilidade durante seus dias
+            em Bananeiras.
+          </p>
 
         </div>
 
 
         <div class="amenities-grid">
 
-          <div class="amenity">
+
+          <!-- SUÍTES -->
+
+          <article class="amenity-card">
+
+            <div class="amenity-icon">
+
+              <i data-lucide="bed-double"></i>
+
+            </div>
+
+            <div class="amenity-info">
+
+              <h3>2 suítes</h3>
+
+              <p>
+                Duas suítes aconchegantes,
+                cada uma com uma cama auxiliar.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- BANHEIRO -->
+
+          <article class="amenity-card">
+
+            <div class="amenity-icon">
+
+              <i data-lucide="bath"></i>
+
+            </div>
+
+            <div class="amenity-info">
+
+              <h3>Banheiro social</h3>
+
+              <p>
+                Além das suítes, o chalé conta
+                com um banheiro social.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- COZINHA -->
+
+          <article class="amenity-card">
+
+            <div class="amenity-icon">
+
+              <i data-lucide="cooking-pot"></i>
+
+            </div>
+
+            <div class="amenity-info">
+
+              <h3>Cozinha equipada</h3>
+
+              <p>
+                Utensílios de cozinha disponíveis
+                para deixar sua estadia mais prática.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- SMART TV -->
+
+          <article class="amenity-card">
+
+            <div class="amenity-icon">
+
+              <i data-lucide="tv"></i>
+
+            </div>
+
+            <div class="amenity-info">
+
+              <h3>Smart TV</h3>
+
+              <p>
+                Perfeita para aproveitar filmes,
+                séries e momentos de descanso.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- WIFI -->
+
+          <article class="amenity-card">
+
+            <div class="amenity-icon">
+
+              <i data-lucide="wifi"></i>
+
+            </div>
+
+            <div class="amenity-info">
+
+              <h3>Wi-Fi</h3>
+
+              <p>
+                Internet disponível para você
+                permanecer conectado durante a estadia.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- ESTACIONAMENTO -->
+
+          <article class="amenity-card">
+
+            <div class="amenity-icon">
+
+              <i data-lucide="car-front"></i>
+
+            </div>
+
+            <div class="amenity-info">
+
+              <h3>Estacionamento</h3>
+
+              <p>
+                Mais comodidade e tranquilidade
+                para aproveitar sua hospedagem.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- HÓSPEDES -->
+
+          <article class="amenity-card">
+
             <div class="amenity-icon">
               <i data-lucide="users"></i>
             </div>
 
-            <h3>Até 6 pessoas</h3>
+            <div class="amenity-info">
 
-            <p>
-              Espaço preparado para receber
-              família ou amigos.
-            </p>
-          </div>
+              <h3>Até 6 pessoas</h3>
 
+              <p>
+                Espaço preparado para acomodar até 6 hóspedes
+                com conforto, ideal para famílias ou grupos de amigos.
+              </p>
 
-          <div class="amenity">
-            <div class="amenity-icon">
-              <i data-lucide="bed-double"></i>
             </div>
 
-            <h3>Conforto</h3>
-
-            <p>
-              Ambientes aconchegantes para
-              aproveitar cada momento.
-            </p>
-          </div>
+          </article>
 
 
-          <div class="amenity">
+          <!-- NATUREZA -->
+
+          <article class="amenity-card">
+
             <div class="amenity-icon">
-              <i data-lucide="wifi"></i>
-            </div>
 
-            <h3>Wi-Fi</h3>
-
-            <p>
-              Internet para você permanecer
-              conectado durante a estadia.
-            </p>
-          </div>
-
-
-          <div class="amenity">
-            <div class="amenity-icon">
-              <i data-lucide="utensils"></i>
-            </div>
-
-            <h3>Cozinha</h3>
-
-            <p>
-              Estrutura para tornar sua
-              estadia ainda mais prática.
-            </p>
-          </div>
-
-
-          <div class="amenity">
-            <div class="amenity-icon">
-              <i data-lucide="car-front"></i>
-            </div>
-
-            <h3>Estacionamento</h3>
-
-            <p>
-              Mais comodidade e tranquilidade
-              durante sua hospedagem.
-            </p>
-          </div>
-
-
-          <div class="amenity">
-            <div class="amenity-icon">
               <i data-lucide="trees"></i>
+
             </div>
 
-            <h3>Natureza</h3>
+            <div class="amenity-info">
 
-            <p>
-              Clima tranquilo e contato com
-              a beleza da serra.
-            </p>
-          </div>
+              <h3>Clima da serra</h3>
+
+              <p>
+                Tranquilidade, clima agradável
+                e contato com a natureza.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <div class="amenities-bottom">
+
+          <p>
+            Quer saber mais sobre a estrutura do chalé?
+          </p>
+
+          <a href="#" class="amenities-link whatsapp-link">
+            Tire suas dúvidas pelo WhatsApp
+
+            <i data-lucide="arrow-right"></i>
+          </a>
 
         </div>
 
@@ -362,7 +559,7 @@
     </section>
 
 
-    <!-- ================= SOBRE ================= -->
+    <!-- ================= EXPERIÊNCIA ================= -->
 
     <section class="experience" id="sobre">
 
@@ -382,21 +579,23 @@
           <div class="line"></div>
 
           <p>
-            Respire o ar puro da serra, aproveite
+            Respire o ar da serra, aproveite
             o clima acolhedor de Bananeiras e
             permita-se viver dias mais leves.
           </p>
 
           <p>
-            No Chalé da Serra, o que realmente
-            importa é aproveitar o tempo com
-            quem você ama.
+            No Chalé da Serra, cada detalhe convida
+            você a esquecer a correria e aproveitar
+            bons momentos ao lado de quem você ama.
           </p>
 
           <a href="#" class="experience-link whatsapp-link">
+
             Quero conhecer o chalé
 
             <i data-lucide="arrow-right"></i>
+
           </a>
 
         </div>
@@ -404,7 +603,7 @@
 
         <div class="experience-image">
 
-          <img src="assets/chale-foto1.jpeg" alt="Vista tranquila para as montanhas">
+          <img src="assets/chale-foto1.jpeg" alt="Chalé da Serra em Bananeiras">
 
         </div>
 
@@ -415,7 +614,7 @@
 
     <!-- ================= LOCALIZAÇÃO ================= -->
 
-    <section class="section location-section" id="localizacao">
+    <section class="location-section section" id="localizacao">
 
       <div class="container">
 
@@ -430,6 +629,12 @@
             <span>- PB</span>
           </h2>
 
+          <p>
+            Aproveite o clima e a tranquilidade
+            de uma das cidades mais encantadoras
+            do Brejo Paraibano.
+          </p>
+
         </div>
 
 
@@ -438,7 +643,9 @@
           <div class="location-info">
 
             <div class="location-icon">
+
               <i data-lucide="map-pin"></i>
+
             </div>
 
             <h3>
@@ -449,9 +656,8 @@
             <p>
               O Chalé da Serra está localizado
               em Bananeiras, no Brejo Paraibano,
-              uma região conhecida pelo clima
-              agradável, tranquilidade e belas
-              paisagens.
+              uma região conhecida pelo clima agradável,
+              tranquilidade e belas paisagens.
             </p>
 
             <p>
@@ -459,23 +665,38 @@
               fugir da rotina e aproveitar alguns
               dias de descanso.
             </p>
-            <p class="localizacao-color">
-              Rua Santo Antônio. Loteamento Alto da Serra, Bananeiras - PB
-            </p>
+
+            <div class="location-address">
+
+              <i data-lucide="map"></i>
+
+              <div>
+
+                <span>Endereço</span>
+
+                <strong>
+                  Rua Santo Antônio
+                </strong>
+
+                <p>
+                  Loteamento Alto da Serra,
+                  Bananeiras - PB
+                </p>
+
+              </div>
+
+            </div>
 
           </div>
 
 
           <div class="location-images">
 
-            <img src="assets/foto-chale10.jpeg"
-              alt="Paisagem da serra">
+            <img src="assets/foto-chale10.jpeg" alt="Paisagem próxima ao Chalé da Serra">
 
-            <img src="assets/foto-chale11.jpeg"
-              alt="Natureza e montanhas">
+            <img src="assets/foto-chale11.jpeg" alt="Natureza em Bananeiras">
 
-            <img src="assets/chale-foto1.jpeg"
-              alt="Paisagem tranquila">
+            <img src="assets/chale-foto1.jpeg" alt="Chalé da Serra">
 
           </div>
 
@@ -495,7 +716,7 @@
       <div class="container cta-content">
 
         <span class="eyebrow light">
-          RESERVE SUA ESTADIA
+          VIVA ESSA EXPERIÊNCIA
         </span>
 
         <h2>
@@ -510,15 +731,21 @@
         </p>
 
         <a href="#" class="btn btn-primary btn-large whatsapp-link">
+
           <i data-lucide="message-circle"></i>
 
-          Consultar valores e disponibilidade
+          Consultar diária e disponibilidade
+
         </a>
 
         <div class="cta-detail">
+
           <i data-lucide="shield-check"></i>
 
-          Atendimento rápido pelo WhatsApp
+          <span>
+            Atendimento rápido pelo WhatsApp
+          </span>
+
         </div>
 
       </div>
@@ -535,6 +762,7 @@
     <div class="container footer-content">
 
       <div class="footer-logo">
+
         <strong>
           CHALÉ DA SERRA
         </strong>
@@ -542,17 +770,28 @@
         <span>
           Bananeiras - PB
         </span>
-      </div>
-      <div class="footer-logo">
-        <strong>Siga-nos no instagram</strong>
-        <p>
-          @chaledaserra.bananeiras
-        </p>
+
       </div>
 
-      <p>
+
+      <div class="footer-instagram">
+
+        <span>
+          Siga-nos no Instagram
+        </span>
+
+        <strong>
+          @chaledaserra.bananeiras
+        </strong>
+
+      </div>
+
+
+      <p class="copyright">
+
         © <span id="currentYear"></span>
-        ChaleDaSerra. Todos os direitos reservados.
+        Chalé da Serra. Todos os direitos reservados.
+
       </p>
 
     </div>
@@ -560,24 +799,13 @@
   </footer>
 
 
-  <!-- ================= BOTÃO WHATSAPP FLUTUANTE ================= -->
+  <!-- ================= WHATSAPP FLUTUANTE ================= -->
 
   <a href="#" class="floating-whatsapp whatsapp-link" aria-label="Falar pelo WhatsApp">
+
     <i data-lucide="message-circle"></i>
+
   </a>
-
-
-  <!-- ================= MODAL GALERIA ================= -->
-
-  <div class="image-modal" id="imageModal">
-
-    <button class="modal-close" id="modalClose" aria-label="Fechar imagem">
-      <i data-lucide="x"></i>
-    </button>
-
-    <img src="" alt="Imagem ampliada do Chalé da Serra" id="modalImage">
-
-  </div>
 
 
   <script src="script.js"></script>
